@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/public/js/connect.js"></script>
+    <title>Ellefern VoiceChanger</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700;800&display=swap');
+
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        .grad_ {
+            background: linear-gradient(to right, #be185d, #ffb4db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .center-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: start;
+            min-height: 95vh;
+        }
+    </style>
+    <link href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+</head>
+
+<body style="background-color: black;">
+    <div id="log" style="opacity: 50%; color: rgb(148, 148, 148); position: fixed; max-height: 98vh; width: 100vw; max-width: 100vw; overflow-y: scroll; overflow-x: hidden; padding-left: 7px; padding-right: 7px;">
+    <p style="margin: 0px; padding: 0px;">
+       Welcome to VOX VOICECHANGER VoiceChanger v0.1b<br>
+        <i class="fas fa-angle-right" style="color: #ff69ab"></i> Log: รีโหลดระบบครั้งล่าสุดเมื่อ <span id="lastreload" style="color: #ff69ab">...</span>
+    </p>
+    </div>
+    <div class="center-screen">
+        <div style="color: white; display: grid; justify-items: center; border-radius: 10px; padding: 10px;">
+            <div>
+                <h1 class="grad_" style="font-size: 50px; margin-bottom: -30px; margin-top: 5px;  font-weight: bold; text-align: center;">
+                    KFN
+                </h1>
+                <h1 style="font-size: 20px; margin-bottom: 15px; text-align: start;">
+                    VoiceChanger v 0.1b
+                </h1>
+            </div>
+            <div style="background-color: #0b0b0b; border-radius: 5px; padding: 20px; width: 280px; z-index: 1;">
+                <center>
+                    <span style="margin-right: 2px;">
+                        <i class="fas fa-microphone" id="awake" style="color: #ff69ab; font-size: larger;"></i>
+                    </span>
+                    <span id="speak">
+                        "ไมค์ของคุณถูกเรียกใช้งานอยู่"
+                    </span>
+                </center>
+                <center id="showbotreply">
+                    <span style="margin-right: 2px;">
+                        <i class="fas fa-comment-alt-lines" style="color: white;"> </i>
+                    </span>
+                    <span id="botreply">
+                        พูดอะไรสักอย่างสิ
+                    </span>
+                </center>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("lastreload").innerText = `${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()} ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}:${new Date().getMilliseconds()}`
+</script>
+
+</html>
