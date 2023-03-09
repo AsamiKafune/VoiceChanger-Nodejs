@@ -11,3 +11,5 @@
 - Install module `npm install` or `yarn install`
 - Config VBCable
 - Run start.bat
+
+Thank you for the idea from this video: https://youtu.be/UY7sRB60wZ4
